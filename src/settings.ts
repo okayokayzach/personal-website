@@ -1,7 +1,7 @@
 export const profile = {
-	fullName: 'Your Name',
-	title: '',
-	institute: '',
+	fullName: 'Zachary Prins',
+	title: 'Student',
+	institute: 'Thompson Rivers University',
 	author_name: '', // Author name to be highlighted in the papers section
 	research_areas: [
 		// { title: 'Physics', description: 'Brief description of the research interest', field: 'physics' },
@@ -10,9 +10,9 @@ export const profile = {
 
 // Set equal to an empty string to hide the icon that you don't want to display
 export const social = {
-	email: '',
-	linkedin: '',
-	x: 'https://www.x.com/',
+	email: 'prins00zachary@gmail.com',
+	linkedin: 'https://www.linkedin.com/in/zachary-prins/',
+	x: '',
 	github: '',
 	gitlab: '',
 	scholar: '',
@@ -32,7 +32,7 @@ export const template = {
 }
 
 export const seo = {
-	default_title: 'Astro Academia',
-	default_description: 'Astro Academia is a template for academic websites.',
+	default_title: 'Zachary Prins',
+	default_description: 'Mathematics Student',
 	default_image: '/images/astro-academia.png',
 }
