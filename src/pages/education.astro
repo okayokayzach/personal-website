@@ -6,20 +6,6 @@ import List from "@/components/ui/List.astro";
 import {RESEARCH_ICONS} from "@/data/researchIcons";
 import TagsList from '@/skillfactory/tags-list.astro';
 
-import {
-  linearAlgebra,
-  calc,
-  diffQ,
-  macroEcon,
-  gpa,
-  deans,
-  microEcon,
-  AI,
-  obj,
-  dataStruct,
-  discrete,
-  stat,
-} from '../skillfactory/skills';
 import Skills from "@/components/ui/Skills.astro";
 
 const { research_areas } = profile;
@@ -52,14 +38,30 @@ const { research_areas } = profile;
       {
         title: "Major in Mathematics",
         description: "Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        skills:[
+          { name: "Linear Algebra", icon: "", iconColor: "", description: "(MATH 2120)" },
+          { name: "Differential Equations", icon: "", iconColor: "", description: "Ordinary and partial differential equations (MATH 2240 & 3160)" },
+          { name: "Calculus", icon: "", iconColor: "", description: "Differential, integral, and multivariable calculus (MATH 1140, 1240, & 2110)" },
+          { name: "Discrete Math", icon: "", iconColor: "", description: "(MATH 1700)" },
+          { name: "Statistics", icon: "", iconColor: "", description: "(STAT 2000)" },
+      ]
       },
       {
         title: "Major in Economics",
-        description: "Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+        description: "Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+        skills:[
+          { name: "Microeconomics", icon: "", iconColor: "", description: "Principles of Microeconomics (ECON 1950)" },
+          { name: "Macroeconomics", icon: "", iconColor: "", description: "Principles of Macroeconomics (ECON 1900)" },
+      ]
       },
       {
         title: "Minor in Computing Science",
-        description: "Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+        description: "Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. ",
+        skills: [
+          { name: "Applied AI", icon: "", iconColor: "", description: "Applications of artificial intelligence (COMP 3710)" },
+          { name: "Object Oriented Programming", icon: "", iconColor: "", description: "(COMP 3140)" },
+          { name: "Data Structures", icon: "", iconColor: "", description: "(COMP 2230)" },
+      ]
       }
     ]} />
     <h2 class="text-sky-700 font-bold">Math Club</h2>

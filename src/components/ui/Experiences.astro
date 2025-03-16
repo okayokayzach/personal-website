@@ -4,7 +4,9 @@ import type { Skills } from "@/components/ui/Skills.astro";
 interface Props {
   listTitle: string;
   listItems: {
-    title: string;
+    position: string;
+    company: string;
+    dates: string;
     description: string;
     skills: Skills[];
   }[];
@@ -18,8 +20,14 @@ const { listTitle, listItems } = Astro.props;
   {listItems.map((item) => (
     <div class="p-6 bg-base-200 rounded-xl text-base-content">
       {/* Title */}
-      <h3 class="text-xl font-semibold mb-3">{item.title}</h3>
+      <div class="flex justify-between items-start mb-1">
+        <h3 class="text-xl font-bold">{item.position}</h3>
+        <span class="text-base text-gray-500">{item.dates}</span>
+        </div>
       
+        {/* Company and Location */}
+         <p class="text-base mb-2 text-amber-800">{item.company}</p>
+
       {/* Description */}
       <p class="mb-3">{item.description}</p>
 

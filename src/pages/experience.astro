@@ -1,0 +1,97 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { profile } from "@/settings";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import TagsList from '@/skillfactory/tags-list.astro';
+
+import Experiences from "@/components/ui/Experiences.astro";
+
+const { research_areas } = profile;
+---
+
+<Layout title="Experience | Zachary Prins">
+  
+  <!-- <div class="prose max-w-none prose-headings:mb-0 prose-headings:leading-snug"> -->
+
+    <h1 class="text-3xl font-bold mb-2 leading-snug text-lime-600 ">Experience</h1>
+    <!-- <h2 class="text-2xl font-bold mb-1 leading-snug">Thompson Rivers University (2023-2027)</h2> -->
+    <!-- <h2 class="text-2xl font-bold mb-4">Achievements</h2> -->
+    <!-- <Skills listTitle="" listItems={[
+      {
+        name: "Dean's List",
+        icon: "",
+        iconColor: 'text-sky-700',
+        description: "Fall 2023, Winter 2024, Fall 2024.",
+      },
+      {
+        name: "4.30 GPA",
+        icon: "",
+        iconColor: 'text-sky-700',
+        description: "Sept 2023-Fall 2024",
+      },
+    ]} /> -->
+
+    <Experiences listTitle="" listItems={[
+      {
+        position: "Garden Centre Team Member",
+        company:"Lyons Landscaping & Garden Centre. Kamloops, BC",
+        dates:"05 - 09/2024	",
+        description: "Took initiative in expanding knowledge of plant care and landscaping materials to provide better support to customers.",
+        skills:[
+          { name: "Self-modivated", icon: "", iconColor: "", description: "" },
+      ]
+      },
+      {
+        position: "Soft Goods Manger",
+        company:"Ski Cellar Snowboard. Calgary, AB	",
+        dates:"08/2022 - 04/2023",
+        description: `
+        Led a team to exceed sales targets, showcasing leadership and teamwork. 
+        Demonstrated strong written professional communication skills through emailing within and outside of the company.
+        Communicated technical ideas to customers in easy to understand terms.
+        `,
+        skills:[
+          { name: "Leadership", icon: "", iconColor: "", description: "" },
+          { name: "Teamwork", icon: "", iconColor: "", description: "" },
+      ]
+      },
+      {
+        position: "Sales Associate",
+        company:"Ski Cellar Snowboard. Calgary, AB",
+        dates:"09/2021 - 08/2022",
+        description: `
+        Consistently performed above sales goals in a fast-paced, high-revenue environment.  
+        Top salesperson in the company of 50+ employees two consecutive holiday seasons.`,        
+        skills:[
+          { name: "Communication", icon: "", iconColor: "", description: "" },
+      ]
+      },
+      {
+        position: "Full-Time Crew Member",
+        company:"Five Guys. Calgary, AB",
+        dates:"02 - 08/2021",
+        description: "",
+        skills: [],
+      },
+    ]} />
+    <!-- <h2 class="text-sky-700 font-bold">Math Club</h2>
+
+    <div class="mb-12">
+      <p class="text-lg mb-6">
+        Description goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a
+      </p>
+    </div>
+
+    <h2 class="text-sky-700 font-bold">Music and Band Club</h2>
+
+    <div class="mb-12">
+      <p class="text-lg mb-6">
+        Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a
+      </p>
+    </div> -->
+
+    
+</Layout>
+
