@@ -1,0 +1,80 @@
+---
+import type { Skills } from "@/components/ui/Skills.astro";
+
+import aiPic from "src/assets/project_textmode.png";
+import checkersPic from "src/assets/project_checkers.png";
+import excelPic from "src/assets/project_excel.png";
+
+
+interface Props {
+  listTitle: string;
+  listItems: {
+    position: string;
+    company: string;
+    dates: string;
+    description: string;
+    skills: Skills[];
+    image: string; 
+  }[];
+}
+
+const { listTitle, listItems } = Astro.props;
+---
+
+<h2 class="text-2xl font-bold mb-6">{listTitle}</h2>
+<div class="grid gap-6 mb-12">
+  {listItems.map((item) => (
+    <div class="flex items-start gap-6 p-6 bg-base-200 rounded-xl text-base-content">
+      {/* Left Side - Text */}
+      <div class="flex-1">
+        {/* Title */}
+        <div class="flex flex-col mb-1"> 
+          <h3 class="text-xl font-bold">{item.position}</h3>
+          <span class="text-base text-gray-500 mt-1">{item.dates}</span> 
+        </div>
+        
+        {/* Company */}
+        <p class="text-base mb-2 text-amber-800">{item.company}</p>
+
+        {/* Description */}
+        <p class="mb-3">{item.description}</p>
+
+        {/* Skills */}
+        {item.skills?.length > 0 && (
+          <div class="flex flex-wrap gap-2">
+            {item.skills.map(({ name, icon, iconColor, description }) => {
+              const className = 'inline-flex h-6 w-fit items-center gap-x-1.5 rounded bg-lime-700 px-2.5 dark:bg-gray-700 hover:bg-lime-700 dark:hover:bg-gray-600';
+              return (
+                <div class="relative group">
+                  {/* Tooltip */}
+                  {description && (
+                    <span class="absolute bottom-full left-1/2 -translate-x-1/2 -translate-y-2 bg-gray-800 text-white text-sm px-3 py-1 rounded opacity-0 transition-opacity duration-200 group-hover:opacity-100 max-w-xs w-max z-50 whitespace-normal">
+                      {description}
+                    </span>
+                  )}
+
+                  {/* Skill */}
+                  <span class={`${className} text-white`}>
+                    {icon && <Icon name={icon} color={iconColor} size={16} />}
+                    {name}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+
+      {/* Right Side - Image */}
+      {item.image && (
+        <div class="flex-shrink-0">
+          <img 
+            src={item.image} 
+            alt={`${item.position}`}
+            class="w-32 h-32 object-cover rounded-lg shadow-md"
+          />
+        </div>
+      )}
+    </div>
+  ))}
+</div>

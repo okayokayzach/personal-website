@@ -6,6 +6,7 @@ interface Props {
   listItems: {
     title: string;
     description: string;
+    highlight: string;
     skills: Skills[];
   }[];
 }
@@ -21,13 +22,17 @@ const { listTitle, listItems } = Astro.props;
       <h3 class="text-xl font-semibold mb-3">{item.title}</h3>
       
       {/* Description */}
-      <p class="mb-3">{item.description}</p>
+      <p class="mb-3">
+        {item.description}
+        <span class="mb-3 text-amber-700 font-semibold">{item.highlight}</span>
+      </p>
+      
 
       {/* Skills */}
       {item.skills?.length > 0 && (
         <div class="flex flex-wrap gap-2">
           {item.skills.map(({ name, icon, iconColor, description }) => {
-            const className = 'inline-flex h-6 w-fit items-center gap-x-1.5 rounded bg-lime-800 px-2.5 dark:bg-gray-700 hover:bg-lime-700 dark:hover:bg-gray-600';
+            const className = 'inline-flex h-6 w-fit items-center gap-x-1.5 rounded bg-lime-700 px-2.5 dark:bg-gray-700 hover:bg-lime-600 dark:hover:bg-gray-600';
             return (
             <div class="relative group">
                 {/* Tooltip for the skill description */}
@@ -41,7 +46,7 @@ const { listTitle, listItems } = Astro.props;
                 <span class={`${className} text-white`}>
                   {icon && <Icon name={icon} color={iconColor} size={16} />}
                   {name}
-                </span>`
+                </span>
               </div>
             );
           })}

@@ -4,6 +4,7 @@ import { Image } from 'astro:assets'
 import SocialIcons from './SocialIcons.astro'
 
 
+
 const {fullName, title, institute, profilePicture} = Astro.props
 ---
 <div class='flex-1'>
@@ -12,8 +13,11 @@ const {fullName, title, institute, profilePicture} = Astro.props
   </h1>
   <p class='text-xl text-gray-600 mb-4'>{title}{institute ? ` at ${institute}` : ''}</p>
   <p class='text-lg mb-6'>
-    Bio goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-     minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+      I’m a third-year student studying Economics and Mathematics with a minor in Computing Science. I thrive on tackling complex problems and learning by doing.
+      I have experience in programming and a strong background in mathematics, statistics, and probability. Outside of academics, my experience in customer service has helped me build strong communication and problem-solving skills.
+    </p>
+    <p class='text-lg mb-6 text-amber-700 font-bold'>
+    I’m excited to bring my technical expertise and strong interpersonal skills to a Summer 2025 co-op opportunity.
   </p>
   <div class='flex gap-4'>
     <SocialIcons />

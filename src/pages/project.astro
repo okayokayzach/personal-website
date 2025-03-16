@@ -1,0 +1,82 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { profile } from "@/settings";
+import BetterIcon from "@/components/ui/BetterIcon.astro";
+import List from "@/components/ui/List.astro";
+import {RESEARCH_ICONS} from "@/data/researchIcons";
+import TagsList from '@/skillfactory/tags-list.astro';
+
+import Projects from "@/components/ui/Projects.astro";
+
+const { research_areas } = profile;
+---
+
+<Layout title="Projects | Zachary Prins">
+
+    <h1 class="text-3xl font-bold mb-2 leading-snug text-lime-600 ">Projects</h1>
+
+    <Projects listTitle="" listItems={[
+        {
+        position: "Progressively Improving Computational Artist",
+        company:"Team size: 2",
+        dates:"Winter 2025",
+        description: `
+       Developing a genetic algorithm to convert images into textmode art. The project is 
+       developed with parallel processing and aims to improve performance 7x over brute-force methods.
+        `,
+        skills:[
+          { name: "C++", icon: "", iconColor: "", description: "" },
+          { name: "VS Code", icon: "", iconColor: "", description: "" },
+          { name: "GitHub", icon: "", iconColor: "", description: "" },
+          ],
+          image:"/images/project_textmode.png",
+        },
+
+      {
+        position: "Wumpus World AI Pathfinding",
+        company:"",
+        dates:"February 2025",
+        description: "Implemented a grid-based simulation of the Wumpus World problem, incorporating hazards, agent perception, and boundaries. Applied knowledge of AI to design and develop an algorithm that uses propositional logic and heuristic searching to navigate safely and reach the goal.",
+        skills:[
+          { name: "Java", icon: "", iconColor: "", description: "" },
+          { name: "IntelliJ IDEA", icon: "", iconColor: "", description: "" },
+          { name: "GitHub", icon: "", iconColor: "", description: "" },
+          ],
+        image: "",
+      },
+      
+      {
+        position: "Two Player Console Checkers Game",
+        company:"Team size: 3",
+        dates:"Fall 2024",
+        description: `
+        Developed a fully functional, console-based checkers game featuring complete movement mechanics, a color-coded interface, win detection, and result logging.
+        Collaborated effectively in a team environment to design, implement, and test the game.
+        `,
+        skills:[
+          { name: "C++", icon: "", iconColor: "", description: "" },
+          { name: "CLion", icon: "", iconColor: "", description: "" },
+          { name: "GitHub", icon: "", iconColor: "", description: "" },
+          ],
+          image: "/images/project_checkers2.png",
+      },
+      
+      
+      {
+        position: "Efficient Expense Tracker",
+        company:"",
+        dates:"Spring 2024",
+        description: `
+        Designed an Excel-based expense tracker and visualizer with streamlined data entry and automatic expense categorization, using dropdown categories and SUMIF functions.
+        `,        
+        skills:[
+          { name: "Microsoft Excel", icon: "", iconColor: "", description: "" },
+        ],
+        image: "/images/project_excel.png",
+      },
+
+
+    ]} />
+    
+</Layout>
+
