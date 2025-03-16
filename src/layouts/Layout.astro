@@ -23,13 +23,13 @@ const {
 ---
 
 <!doctype html>
-<html lang='en'>
+	<html lang='en' data-theme={template.darkMode ? template.darkTheme : template.lightTheme}>
 	<head>
+
+		{console.log(template.lightTheme)}
 		{template.transitions && <ClientRouter /> }
 
 		<Head title={title} description={description} image={image} />
-
-
 
 	</head>
 	<body>

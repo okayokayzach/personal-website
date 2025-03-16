@@ -4,25 +4,67 @@ import { profile } from "@/settings";
 import BetterIcon from "@/components/ui/BetterIcon.astro";
 import List from "@/components/ui/List.astro";
 import {RESEARCH_ICONS} from "@/data/researchIcons";
+import TagsList from '@/skillfactory/tags-list.astro';
+
+import {
+  linearAlgebra,
+  calc,
+  diffQ,
+  macroEcon,
+  gpa,
+  deans,
+  microEcon,
+  AI,
+  obj,
+  dataStruct,
+  discrete,
+  stat,
+} from '../skillfactory/skills';
 
 const { research_areas } = profile;
 ---
 
 <Layout title="Education | Zachary Prins">
-  <div class="prose max-w-none">
-    <h1 class="text-3xl font-bold mb-8">Bachelor of Science</h1>
-    <h2 class="text-2xl font-bold mb-6">Major in Mathematics, minor in Computing Sciences</h2>
+  
+  <!-- <div class="prose max-w-none prose-headings:mb-0 prose-headings:leading-snug"> -->
+
+    <h1 class="text-3xl font-bold mb-2 leading-snug text-lime-600 ">Bachelor of Science</h1>
+    <h2 class="text-2xl font-bold mb-1 leading-snug">Thompson Rivers University (2023-2027)</h2>
+    <!-- <h2 class="text-2xl font-bold mb-4">Achievements</h2> -->
+  
+    <!-- <TagsList tags={[deans, gpa]} /> -->
+
+    <List listTitle="" listItems={[
+      {
+        title: "Major in Mathematics",
+        description: "Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+      },
+      {
+        title: "Major in Economics",
+        description: "Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+      },
+      {
+        title: "Minor in Computing Science",
+        description: "Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+      }
+    ]} />
+    <h2 class="text-sky-700 font-bold">Math Club</h2>
 
     <div class="mb-12">
       <p class="text-lg mb-6">
-        My research focuses on groundbreaking investigations into radioactivity and the discovery of new radioactive elements. Through meticulous experimental techniques and innovative methodologies, I aim to advance our understanding of radioactive phenomena and their applications in both physics and chemistry.
-      </p>
-      <p class="text-lg mb-6">
-        This interdisciplinary approach has led to significant discoveries, including the isolation of polonium and radium, contributing to the foundation of modern nuclear physics and radiochemistry.
+        Description goes here.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a
       </p>
     </div>
 
-    <h2 class="text-2xl font-bold mb-6">Research Areas</h2>
+    <h2 class="text-sky-700 font-bold">Music and Band Club</h2>
+
+    <div class="mb-12">
+      <p class="text-lg mb-6">
+        Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna a
+      </p>
+    </div>
+
+    <!-- <h2 class="text-2xl font-bold mb-6">Research Areas</h2>
     <div class="grid gap-8 mb-12">
       {
         research_areas.map((area) => (
@@ -51,20 +93,11 @@ const { research_areas } = profile;
       }
     </div>
 
-    <List listTitle="Current Projects" listItems={[
-      {
-        title: "Radioactivity Studies",
-        description: "Investigation of radioactive properties in uranium minerals and isolation of new radioactive elements."
-      },
-      {
-        title: "Measurement Techniques",
-        description: "Development of precise methods for measuring radioactive emissions and their properties."
-      }
-    ]} />
+   
 
     <h2 class="text-2xl font-bold mb-6">Research Impact</h2>
     <p class="text-lg mb-6">
       My research has opened new frontiers in radioactivity studies, leading to practical applications in both scientific research and medical treatments. The discoveries have revolutionized our understanding of atomic structure and radioactive decay processes.
     </p>
-  </div>
+  </div> -->
 </Layout>
