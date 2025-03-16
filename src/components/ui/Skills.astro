@@ -1,0 +1,42 @@
+---
+import type { Tag } from '../../skillfactory/shared';
+import Icon from '../../skillfactory/icon.astro';
+import Typography from '../../skillfactory/typography.astro';
+
+interface Props {
+  listTitle: string;
+  listItems: {
+    name: string;
+    icon: string;
+    iconColor: string;
+    description: string;
+  }[];
+}
+
+const { listTitle, listItems } = Astro.props;
+---
+
+<h2 class="text-2xl font-bold mb-6">{listTitle}</h2>
+<div class="flex flex-wrap gap-2">
+  {listItems.map(({ name, icon, iconColor, description }) => {
+    const className = 'inline-flex h-6 w-fit items-center gap-x-1.5 rounded bg-lime-800 px-2.5 dark:bg-gray-700 hover:bg-lime-700 dark:hover:bg-gray-600';
+
+    return (
+      <div class="relative group">
+        {/* Tooltip for the description */}
+        {description && (
+          <span class="absolute -top-8 left-0 bg-gray-800 text-white text-sm px-3 py-1 rounded opacity-0 transition-opacity duration-200 group-hover:opacity-100 max-w-xs w-max z-10">
+            {description}
+          </span>
+        )}
+
+        {/* Text with box */}
+        <Typography variant="tag" class={`${className} font-bold text-white`}>
+          {icon && <icon name={icon} color={iconColor} size={16} />}
+          {name}
+        </Typography>
+      </div>
+    );
+  })}
+</div>
+

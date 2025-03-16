@@ -20,6 +20,7 @@ import {
   discrete,
   stat,
 } from '../skillfactory/skills';
+import Skills from "@/components/ui/Skills.astro";
 
 const { research_areas } = profile;
 ---
@@ -31,13 +32,26 @@ const { research_areas } = profile;
     <h1 class="text-3xl font-bold mb-2 leading-snug text-lime-600 ">Bachelor of Science</h1>
     <h2 class="text-2xl font-bold mb-1 leading-snug">Thompson Rivers University (2023-2027)</h2>
     <!-- <h2 class="text-2xl font-bold mb-4">Achievements</h2> -->
-  
-    <!-- <TagsList tags={[deans, gpa]} /> -->
+    <Skills listTitle="" listItems={[
+      {
+        name: "Dean's List",
+        icon: "",
+        iconColor: 'text-sky-700',
+        description: "Fall 2023, Winter 2024, Fall 2024.",
+      },
+      {
+        name: "4.30 GPA",
+        icon: "",
+        iconColor: 'text-sky-700',
+        description: "Sept 2023-Fall 2024",
+      },
+    ]} />
+
 
     <List listTitle="" listItems={[
       {
         title: "Major in Mathematics",
-        description: "Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        description: "Description goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       },
       {
         title: "Major in Economics",
@@ -64,40 +78,5 @@ const { research_areas } = profile;
       </p>
     </div>
 
-    <!-- <h2 class="text-2xl font-bold mb-6">Research Areas</h2>
-    <div class="grid gap-8 mb-12">
-      {
-        research_areas.map((area) => (
-          <div class="flex gap-6 items-start">
-            <BetterIcon>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke-width="2"
-                class="size-6 stroke-accent"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d={RESEARCH_ICONS[area.field as keyof typeof RESEARCH_ICONS]?.path || RESEARCH_ICONS['computer-science'].path}
-                />
-              </svg>
-            </BetterIcon>
-            <div>
-              <h3 class="text-xl font-semibold mb-2">{area.title}</h3>
-              <p class="text-base">{area.description}</p>
-            </div>
-          </div>
-        ))
-      }
-    </div>
-
-   
-
-    <h2 class="text-2xl font-bold mb-6">Research Impact</h2>
-    <p class="text-lg mb-6">
-      My research has opened new frontiers in radioactivity studies, leading to practical applications in both scientific research and medical treatments. The discoveries have revolutionized our understanding of atomic structure and radioactive decay processes.
-    </p>
-  </div> -->
+    
 </Layout>
